@@ -46,7 +46,7 @@ class Gear:
         """
 
         I = self.I
-        M = np.array([I])
+        M = np.float64(I)
 
         return M
 
@@ -59,7 +59,7 @@ class Gear:
             Stiffness matrix of the gear element
         """
 
-        K = np.zeros((1))
+        K = np.float64(0)
 
         return K
 
@@ -72,6 +72,6 @@ class Gear:
             Damping matrix of the gear element
         """
 
-        C = np.zeros((1))
+        C = np.float64(0)
 
         return C
