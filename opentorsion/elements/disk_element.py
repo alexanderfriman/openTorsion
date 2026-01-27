@@ -34,12 +34,12 @@ class Disk:
 
         Returns
         -------
-        M: ndarray
+        M: np.float64
             Mass matrix of the disk element
         """
 
         I = self.I
-        M = np.array([I], dtype=np.float64)
+        M = np.float64(I)
 
         return M
 
@@ -52,7 +52,7 @@ class Disk:
             Damping matrix of disk element
         """
 
-        return np.array([self.c], dtype=np.float64)
+        return np.float64(self.c)
 
     def K(self):
         """Stiffness matrix of a disk element
@@ -63,7 +63,7 @@ class Disk:
             Stiffness matrix of the disk element
         """
         k = self.k
-        K = np.array([k], dtype=np.float64)
+        K = np.float64(k)
 
         return K
 
